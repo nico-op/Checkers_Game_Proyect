@@ -65,7 +65,7 @@ build CMakeFiles/checkersExe.dir/main.cpp.o: CXX_COMPILER__checkersExe_Debug /ho
 
 build checkersExe: CXX_EXECUTABLE_LINKER__checkersExe_Debug CMakeFiles/checkersExe.dir/main.cpp.o
   FLAGS = -g
-  LINK_LIBRARIES = -lsfml-system  -lsfml-window  -lsfml-graphics
+  LINK_LIBRARIES = -lsfml-system  -lsfml-window  -lsfml-graphics  -lsfml-audio
   OBJECT_DIR = CMakeFiles/checkersExe.dir
   POST_BUILD = :
   PRE_LINK = :
