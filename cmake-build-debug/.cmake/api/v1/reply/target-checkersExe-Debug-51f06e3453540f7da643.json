@@ -95,6 +95,11 @@
 				"backtrace" : 2,
 				"fragment" : "-lsfml-audio",
 				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lsfml-network",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"

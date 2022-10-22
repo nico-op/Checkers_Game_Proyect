@@ -8,5 +8,5 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(checkersExe main.cpp)
 
 
-target_link_libraries(checkersExe sfml-system sfml-window sfml-graphics sfml-audio)
+target_link_libraries(checkersExe sfml-system sfml-window sfml-graphics sfml-audio sfml-network)
 
