@@ -184,7 +184,7 @@ int main()
 {
     sf::ContextSettings settings;
     settings.antialiasingLevel = 16.0;
-    sf::RenderWindow window(sf::VideoMode(600, 600), "Inmersive Checkers", sf::Style::Default, settings);
+    sf::RenderWindow window(sf::VideoMode(600, 600), "Inmersive Checkers", sf::Style::Default, settings); //Se crea la ventana,se establecen sus dimensiones y nombre
     sf::Event event;
     Board board;
     int grid[8][8];
@@ -202,10 +202,10 @@ int main()
     
     Setup(window, WhitePieces, BlackPieces);
 
-    while (window.isOpen()) {
+    while (window.isOpen()) {   //la ventana se abre constantemente
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed) {
-                window.close();
+                window.close();   //Comprueba si la ventana se esta cerrando o no
             }
             
             if (event.type == sf::Event::MouseButtonReleased) {
@@ -215,9 +215,9 @@ int main()
             }
         }
 
-        window.clear();
-
-        board.Draw(window);
+        window.clear();  //Se limpian los cambios anteriores
+        //Aca dentro se coloca lo que se quiere dibujar
+        board.Draw(window);  //se dibuja la ventana
 
         if (SelectedPiece != NULL) {
             board.Highlight(window, SelectedPiece->x, SelectedPiece->y);
