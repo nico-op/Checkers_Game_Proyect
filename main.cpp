@@ -1,7 +1,5 @@
 
-
 #include <iostream>
-
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include <SFML/System.hpp>
@@ -186,7 +184,7 @@ int main()
 {
     sf::ContextSettings settings;
     settings.antialiasingLevel = 16.0;
-    sf::RenderWindow window(sf::VideoMode(600, 600), "Checkers", sf::Style::Default, settings);
+    sf::RenderWindow window(sf::VideoMode(600, 600), "Inmersive Checkers", sf::Style::Default, settings);
     sf::Event event;
     Board board;
     int grid[8][8];

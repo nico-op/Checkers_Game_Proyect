@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/checkersExe.dir/main.cpp.o -o checkersExe  -lsfml-system -lsfml-window -lsfml-graphics -lsfml-audio -lsfml-network 
