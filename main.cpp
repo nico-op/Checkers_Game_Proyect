@@ -5,7 +5,7 @@
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Network.hpp>
-
+//Clase para configurar los colores de los cuadros del tablero.
 class Board {
 public:
     int size = 8;
@@ -45,6 +45,7 @@ public:
     bool isKing = false;
     sf::Color color;
 
+    //Metodo Draw: Permite dibujar la pieza en el tablero, además posee un caso si la pieza se convierte en rey o no
     void Draw(sf::RenderWindow& window) {
         if (isAlive) {
             sf::CircleShape shape(radius);
