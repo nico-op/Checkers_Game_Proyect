@@ -34,7 +34,22 @@ public:
                 tile2.setSize(sf::Vector2f(600.f,100.f));
                 tile2.setPosition(sf::Vector2f(0,600));
                 tile2.setFillColor(sf::Color(139,69,19));
-                window.draw(tile2);     
+                window.draw(tile2);
+
+                sf:: Text text;
+                sf:: Font fuente1;
+                fuente1.loadFromFile("Garuda.ttf");
+                //Seleccionar fuente
+                text.setFont(fuente1);
+                //Seleccionar el string a mostrar
+                text.setString("A");
+                //Seleccionar el tamaño
+                text.setCharacterSize(24);
+                //Seleccionar el color
+                text.setFillColor(sf::Color::White);
+                //Seleccionar posicion del text0
+                text.setPosition(sf::Vector2f(0,500));
+                window.draw(text);
             }
         }
     }
