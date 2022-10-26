@@ -17,25 +17,24 @@ public:
             for (int j = 0;j < size;j++) {
                 tile.setPosition(sf::Vector2f(75*i,75*j));
                 if ((i + j) % 2 == 0) {
-                    tile.setFillColor(sf::Color(231,179,133));
+                    tile.setFillColor(sf::Color(231,179,133)); //Color beige
                 }
                 else {
-                    tile.setFillColor(sf::Color(92,37,0));
+                    tile.setFillColor(sf::Color(92,37,0)); //Color cafe
                 }
                 window.draw(tile);
 
                 sf::RectangleShape tile1;
                 tile1.setSize(sf::Vector2f(100.f,600.f));
                 tile1.setPosition(sf::Vector2f(600,0));
-                tile1.setFillColor(sf::Color(210,140,133));
+                tile1.setFillColor(sf::Color(139,69,19));
                 window.draw(tile1);
 
                 sf::RectangleShape tile2;
                 tile2.setSize(sf::Vector2f(600.f,100.f));
                 tile2.setPosition(sf::Vector2f(0,600));
-                tile2.setFillColor(sf::Color(210,140,133));
-                window.draw(tile2);
-
+                tile2.setFillColor(sf::Color(139,69,19));
+                window.draw(tile2);     
             }
         }
     }
