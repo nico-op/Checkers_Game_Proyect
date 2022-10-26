@@ -5,7 +5,6 @@ set(SFML_STATIC_LIBRARIES TRUE)
 set(CMAKE_CXX_STANDARD 14)
 
 
-
 add_executable(checkersExe main.cpp)
 
 add_executable(prueba PruebaWindow.cpp)
