@@ -12,10 +12,10 @@ public:
 
     void Draw(sf::RenderWindow& window) {
         sf::RectangleShape tile;
-        tile.setSize(sf::Vector2f(75.f, 75.f));
+        tile.setSize(sf::Vector2f(75.f,75.f));
         for (int i = 0;i < size;i++) {
             for (int j = 0;j < size;j++) {
-                tile.setPosition(sf::Vector2f(75 * i, 75 * j));
+                tile.setPosition(sf::Vector2f(75*i,75*j));
                 if ((i + j) % 2 == 0) {
                     tile.setFillColor(sf::Color(231,179,133));
                 }
@@ -23,6 +23,19 @@ public:
                     tile.setFillColor(sf::Color(92,37,0));
                 }
                 window.draw(tile);
+
+                sf::RectangleShape tile1;
+                tile1.setSize(sf::Vector2f(100.f,600.f));
+                tile1.setPosition(sf::Vector2f(600,0));
+                tile1.setFillColor(sf::Color(210,140,133));
+                window.draw(tile1);
+
+                sf::RectangleShape tile2;
+                tile2.setSize(sf::Vector2f(600.f,100.f));
+                tile2.setPosition(sf::Vector2f(0,600));
+                tile2.setFillColor(sf::Color(210,140,133));
+                window.draw(tile2);
+
             }
         }
     }
@@ -185,7 +198,7 @@ int main()
 {
     sf::ContextSettings settings;
     settings.antialiasingLevel = 16.0;
-    sf::RenderWindow window(sf::VideoMode(600, 600), "Inmersive Checkers", sf::Style::Default, settings); //Se crea la ventana,se establecen sus dimensiones y nombre
+    sf::RenderWindow window(sf::VideoMode(650, 650), "Inmersive Checkers", sf::Style::Default, settings); //Se crea la ventana,se establecen sus dimensiones y nombre
     sf::Event event;
     Board board;
     int grid[8][8];
