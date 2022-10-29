@@ -57,10 +57,10 @@ RM = /snap/clion/209/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/meibel/Descargas/ProyectoII_DatosII
+CMAKE_SOURCE_DIR = /home/nico/Documentos/ProyectoII_DatosII
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/meibel/Descargas/ProyectoII_DatosII/cmake-build-debug
+CMAKE_BINARY_DIR = /home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meibel/Descargas/ProyectoII_DatosII/cmake-build-debug/CMakeFiles /home/meibel/Descargas/ProyectoII_DatosII/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/CMakeFiles /home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meibel/Descargas/ProyectoII_DatosII/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,6 +129,43 @@ checkersExe/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/checkersExe.dir/build.make CMakeFiles/checkersExe.dir/build
 .PHONY : checkersExe/fast
 
+#=============================================================================
+# Target rules for targets named prueba
+
+# Build rule for target.
+prueba: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prueba
+.PHONY : prueba
+
+# fast build rule for target.
+prueba/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prueba.dir/build.make CMakeFiles/prueba.dir/build
+.PHONY : prueba/fast
+
+PruebaWindow.o: PruebaWindow.cpp.o
+.PHONY : PruebaWindow.o
+
+# target to build an object file
+PruebaWindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prueba.dir/build.make CMakeFiles/prueba.dir/PruebaWindow.cpp.o
+.PHONY : PruebaWindow.cpp.o
+
+PruebaWindow.i: PruebaWindow.cpp.i
+.PHONY : PruebaWindow.i
+
+# target to preprocess a source file
+PruebaWindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prueba.dir/build.make CMakeFiles/prueba.dir/PruebaWindow.cpp.i
+.PHONY : PruebaWindow.cpp.i
+
+PruebaWindow.s: PruebaWindow.cpp.s
+.PHONY : PruebaWindow.s
+
+# target to generate assembly for a file
+PruebaWindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prueba.dir/build.make CMakeFiles/prueba.dir/PruebaWindow.cpp.s
+.PHONY : PruebaWindow.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -162,6 +199,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... checkersExe"
+	@echo "... prueba"
+	@echo "... PruebaWindow.o"
+	@echo "... PruebaWindow.i"
+	@echo "... PruebaWindow.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

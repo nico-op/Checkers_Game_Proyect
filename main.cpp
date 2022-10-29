@@ -39,7 +39,7 @@ public:
                 //Aca se van a numerar las columnas del tablero (A-H)
                 sf:: Text textA, textB, textC, textD , textE, textF, textG, textH;
                 sf:: Font font;
-                font.loadFromFile("/home/meibel/Descargas/ProyectoII_DatosII/Garuda.ttf");
+                font.loadFromFile("/home/nico/Documentos/ProyectoII_DatosII/Garuda.ttf");
                 //Seleccionar fuente
                 textA.setFont(font); textB.setFont(font); textC.setFont(font); textD.setFont(font);
                 textE.setFont(font); textF.setFont(font); textG.setFont(font); textH.setFont(font);
@@ -97,7 +97,7 @@ public:
         window.draw(tile);
     }
 };
-
+//jj
 class Piece {
 public:
     float radius = 30;

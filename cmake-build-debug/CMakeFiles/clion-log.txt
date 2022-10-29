@@ -1,6 +1,6 @@
-/snap/clion/209/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/meibel/Descargas/ProyectoII_DatosII -B /home/meibel/Descargas/ProyectoII_DatosII/cmake-build-debug
--- The C compiler identification is GNU 11.2.0
--- The CXX compiler identification is GNU 11.2.0
+/snap/clion/209/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/nico/Documentos/ProyectoII_DatosII -B /home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
 -- Check for working C compiler: /usr/bin/cc - skipped
@@ -13,4 +13,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/meibel/Descargas/ProyectoII_DatosII/cmake-build-debug
+-- Build files have been written to: /home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug
