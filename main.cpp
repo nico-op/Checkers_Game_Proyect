@@ -85,7 +85,6 @@ public:
                 //Mostrar en pantalla
                 window.draw(text1); window.draw(text2); window.draw(text3); window.draw(text4);
                 window.draw(text5); window.draw(text6); window.draw(text7); window.draw(text8);
-                
             }
         }
     }
