@@ -36,16 +36,40 @@ public:
                 tile2.setFillColor(sf::Color(139,69,19));
                 window.draw(tile2);
 
-                //Aca se van a numerar las columnas del tablero
-                sf:: Text text1, text2, text3, text4 , text5, text6, text7, text8;
+                //Aca se van a numerar las columnas del tablero (A-H)
+                sf:: Text textA, textB, textC, textD , textE, textF, textG, textH;
                 sf:: Font font;
                 font.loadFromFile("/home/meibel/Descargas/ProyectoII_DatosII/Garuda.ttf");
+                //Seleccionar fuente
+                textA.setFont(font); textB.setFont(font); textC.setFont(font); textD.setFont(font);
+                textE.setFont(font); textF.setFont(font); textG.setFont(font); textH.setFont(font);
+                //Seleccionar el string a mostrar
+                textA.setString("A"); textB.setString("B"); textC.setString("C");textD.setString("D");
+                textE.setString("E"); textF.setString("F"); textG.setString("G");textH.setString("H");
+                //Seleccionar el tamaño
+                textA.setCharacterSize(22); textB.setCharacterSize(22);textC.setCharacterSize(22);
+                textD.setCharacterSize(22); textE.setCharacterSize(22); textF.setCharacterSize(22);
+                textG.setCharacterSize(22); textH.setCharacterSize(22);
+                //Seleccionar el color
+                textA.setFillColor(sf::Color::Black); textB.setFillColor(sf::Color::Black); textC.setFillColor(sf::Color::Black);
+                textD.setFillColor(sf::Color::Black); textE.setFillColor(sf::Color::Black);textF.setFillColor(sf::Color::Black);
+                textG.setFillColor(sf::Color::Black); textH.setFillColor(sf::Color::Black);
+                //Seleccionar posicion del texto
+                textA.setPosition(sf::Vector2f(30,610)); textB.setPosition(sf::Vector2f(105,610));textC.setPosition(sf::Vector2f(180,610));
+                textD.setPosition(sf::Vector2f(255,610)); textE.setPosition(sf::Vector2f(330,610)); textF.setPosition(sf::Vector2f(410,610));
+                textG.setPosition(sf::Vector2f(480,610));textH.setPosition(sf::Vector2f(550,610));
+                //Mostrar en pantalla
+                window.draw(textA); window.draw(textB); window.draw(textC); window.draw(textD);
+                window.draw(textE); window.draw(textF); window.draw(textG); window.draw(textH);
+
+                //Aca se van a numerar las filas del tablero (1-8)
+                sf:: Text text1, text2, text3, text4 , text5, text6, text7, text8;
                 //Seleccionar fuente
                 text1.setFont(font); text2.setFont(font); text3.setFont(font); text4.setFont(font);
                 text5.setFont(font); text6.setFont(font); text7.setFont(font); text8.setFont(font);
                 //Seleccionar el string a mostrar
-                text1.setString("A"); text2.setString("B"); text3.setString("C");text4.setString("D");
-                text5.setString("E"); text6.setString("F"); text7.setString("G");text8.setString("H");
+                text1.setString("1"); text2.setString("2"); text3.setString("3");text4.setString("4");
+                text5.setString("5"); text6.setString("6"); text7.setString("7");text8.setString("8");
                 //Seleccionar el tamaño
                 text1.setCharacterSize(22); text2.setCharacterSize(22);text3.setCharacterSize(22);
                 text4.setCharacterSize(22); text5.setCharacterSize(22); text6.setCharacterSize(22);
@@ -55,12 +79,13 @@ public:
                 text4.setFillColor(sf::Color::Black); text5.setFillColor(sf::Color::Black);text6.setFillColor(sf::Color::Black);
                 text7.setFillColor(sf::Color::Black); text8.setFillColor(sf::Color::Black);
                 //Seleccionar posicion del texto
-                text1.setPosition(sf::Vector2f(30,610)); text2.setPosition(sf::Vector2f(105,610));text3.setPosition(sf::Vector2f(180,610));
-                text4.setPosition(sf::Vector2f(255,610)); text5.setPosition(sf::Vector2f(330,610)); text6.setPosition(sf::Vector2f(410,610));
-                text7.setPosition(sf::Vector2f(480,610));text8.setPosition(sf::Vector2f(550,610));
+                text1.setPosition(sf::Vector2f(620,550)); text2.setPosition(sf::Vector2f(620,470));text3.setPosition(sf::Vector2f(620,400));
+                text4.setPosition(sf::Vector2f(620,325)); text5.setPosition(sf::Vector2f(620,245)); text6.setPosition(sf::Vector2f(620,175));
+                text7.setPosition(sf::Vector2f(620,100));text8.setPosition(sf::Vector2f(620,25));
                 //Mostrar en pantalla
                 window.draw(text1); window.draw(text2); window.draw(text3); window.draw(text4);
                 window.draw(text5); window.draw(text6); window.draw(text7); window.draw(text8);
+                
             }
         }
     }
