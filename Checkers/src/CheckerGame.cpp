@@ -151,7 +151,7 @@ void CheckerGame::gameLoop(sf::RenderWindow& window, sf::Event& event)
 				window.close();
 			}
 			// go back to the main menu (login screen)
-			else if((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::Escape))
+			else if((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::B))
 			{
 				std::cout << std::endl << "Terminating the game, returning to Main Menu." << std::endl;
 				isPlaying = false;
