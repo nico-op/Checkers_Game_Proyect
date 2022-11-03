@@ -10,6 +10,8 @@
 *	All graphics are drawn using SFML primitives (circles, rectangles, and basic polygons).
 */
 
+//PRUEBA
+
 #include "Checkers.hpp"
 #include "CheckerGame.hpp"
 
@@ -45,14 +47,14 @@ void Checkers::start()
 	
 	// load an image to use as an icon on the titlebar
 	sf::Image image;
-	if(!image.loadFromFile("/home/gabrielwolf/Downloads/checkers-master/resources/Checkerboard_8x8_125px.png"))
+	if(!image.loadFromFile("/home/meibel/Documentos/ProyectoII_DatosII/Checkers/resources/Checkerboard_8x8_125px.png"))
 		cerr << RESOURCE_ERROR_IMAGE << endl;
 	// Vector out of range error
 	//window.setIcon(image.getSize().x, image.getSize().y, image.getPixelsPtr());
 	
 	// load the text font
 	sf::Font font;
-	if(!font.loadFromFile("/home/gabrielwolf/Downloads/checkers-master/resources/ENGR.TTF"))
+	if(!font.loadFromFile("/home/meibel/Documentos/ProyectoII_DatosII/Checkers/resources/ENGR.TTF"))
 		cerr << RESOURCE_ERROR_FONT << endl;
 	
 	// initialize menu fonts
@@ -120,7 +122,7 @@ void Checkers::start()
 void Checkers::loadTimes(sf::RenderWindow& window, sf::Event& event)
 {
 	const string RESOURCE_ERROR_SAV = "ERROR - cannot open \"game_times.sav\"";
-	ifstream file("/home/gabrielwolf/Downloads/checkers-master/src/game_times.sav"); // open the file for reading
+	ifstream file("/home/meibel/Documentos/ProyectoII_DatosII/Checkers/src/game_times.sav"); // open the file for reading
 	if(!file)
 		cerr << RESOURCE_ERROR_SAV << endl;
 	else
@@ -139,7 +141,7 @@ void Checkers::loadTimes(sf::RenderWindow& window, sf::Event& event)
 
 		// load the text font
 		sf::Font font;
-		if(!font.loadFromFile("/home/gabrielwolf/Downloads/checkers-master/resources/ENGR.TTF"))
+		if(!font.loadFromFile("/home/meibel/Documentos/ProyectoII_DatosII/Checkers/resources/ENGR.TTF"))
 			cerr << "ERROR - cannot find resource file ENGR.TTF" << endl;
 		sf::Text text;
 		text.setFont(font);
