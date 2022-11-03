@@ -32,10 +32,10 @@ void Checkers::start()
 	// constant strings
 	const string RESOURCE_ERROR_IMAGE = "ERROR - cannot open \"resources/Checkerboard_8x8_125px.png\"";
 	const string RESOURCE_ERROR_FONT = "ERROR - cannot open \"resources/ENGR.TTF\"";
-	const string TITLE = "_CHECKERS_";
-	const string MAIN_MENU = "Press 'P' for Player verse Player\n"
-		"Press 'C' for Players verses Computer\n"
-		"Press 'R' for the Rules\nPress 'T' to View Top 10 Fastest Times";
+	const string TITLE = "INMERSIVE CHECKERS";
+	const string MAIN_MENU = "Para comenzar el juego utilice la letra 'C'\n"
+		"Para ver las reglas utilice la letra 'R' \nPara observar el historial utilice la letra 'H'\n"
+        "Para regresar al inicio utilice la letra 'B'";
 	const string RULES = "See the Checker_Rules.txt files in resources.";
 	const string VIEW_TIMES = "View Fastest Times (in minutes) selected, Main Screen";
 
@@ -54,7 +54,7 @@ void Checkers::start()
 	
 	// load the text font
 	sf::Font font;
-	if(!font.loadFromFile("/home/nico/Escritorio/ProyectoII_DatosII/Checkers/resources/ENGR.TTF"))
+	if(!font.loadFromFile("/home/nico/Escritorio/ProyectoII_DatosII/Checkers/resources/Gayathri-Regular.otf"))
 		cerr << RESOURCE_ERROR_FONT << endl;
 	
 	// initialize menu fonts
@@ -82,7 +82,7 @@ void Checkers::start()
 			{
 				window.close();
 			}
-			else if((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::P)) // human verses human
+			else if((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::L)) // human verses human
 			{
 				CheckerGame checkerGame(window, true, true); // both players are human
 				checkerGame.startCheckers(window, event);
@@ -96,7 +96,7 @@ void Checkers::start()
 			{
 				cout << RULES << endl;
 			}
-			else if((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::T)) // view best scores is selected
+			else if((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::H)) // view best scores is selected
 			{
 				cout << VIEW_TIMES << endl;
 				loadTimes(window, event);
@@ -151,7 +151,7 @@ void Checkers::loadTimes(sf::RenderWindow& window, sf::Event& event)
 		// now sort the times in non-decreasing order
 		sort(times.begin(), times.end());
 		// reset temp
-		temp = "Press B to go back to Main Menu!\n\n\n"
+		temp = "Utilice la letra B para volver al menu\n\n\n"
 			"Top 10 Fastest Times:\n\n";
 		vector<string>::const_iterator it;
 		for(it = times.begin(); it != times.end(); ++it)
