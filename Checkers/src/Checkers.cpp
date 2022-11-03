@@ -47,14 +47,14 @@ void Checkers::start()
 	
 	// load an image to use as an icon on the titlebar
 	sf::Image image;
-	if(!image.loadFromFile("/home/meibel/Documentos/ProyectoII_DatosII/Checkers/resources/Checkerboard_8x8_125px.png"))
+	if(!image.loadFromFile("/home/nico/Escritorio/ProyectoII_DatosII/Checkers/resources/Checkerboard_8x8_125px.png"))
 		cerr << RESOURCE_ERROR_IMAGE << endl;
 	// Vector out of range error
 	//window.setIcon(image.getSize().x, image.getSize().y, image.getPixelsPtr());
 	
 	// load the text font
 	sf::Font font;
-	if(!font.loadFromFile("/home/meibel/Documentos/ProyectoII_DatosII/Checkers/resources/ENGR.TTF"))
+	if(!font.loadFromFile("/home/nico/Escritorio/ProyectoII_DatosII/Checkers/resources/ENGR.TTF"))
 		cerr << RESOURCE_ERROR_FONT << endl;
 	
 	// initialize menu fonts
@@ -122,7 +122,7 @@ void Checkers::start()
 void Checkers::loadTimes(sf::RenderWindow& window, sf::Event& event)
 {
 	const string RESOURCE_ERROR_SAV = "ERROR - cannot open \"game_times.sav\"";
-	ifstream file("/home/meibel/Documentos/ProyectoII_DatosII/Checkers/src/game_times.sav"); // open the file for reading
+	ifstream file("/home/nico/Escritorio/ProyectoII_DatosII/Checkers/src/game_times.sav"); // open the file for reading
 	if(!file)
 		cerr << RESOURCE_ERROR_SAV << endl;
 	else
@@ -141,7 +141,7 @@ void Checkers::loadTimes(sf::RenderWindow& window, sf::Event& event)
 
 		// load the text font
 		sf::Font font;
-		if(!font.loadFromFile("/home/meibel/Documentos/ProyectoII_DatosII/Checkers/resources/ENGR.TTF"))
+		if(!font.loadFromFile("/home/nico/Escritorio/ProyectoII_DatosII/Checkers/resources/ENGR.TTF"))
 			cerr << "ERROR - cannot find resource file ENGR.TTF" << endl;
 		sf::Text text;
 		text.setFont(font);
@@ -151,7 +151,7 @@ void Checkers::loadTimes(sf::RenderWindow& window, sf::Event& event)
 		// now sort the times in non-decreasing order
 		sort(times.begin(), times.end());
 		// reset temp
-		temp = "Press ESC to go back to Main Menu!\n\n\n"
+		temp = "Press B to go back to Main Menu!\n\n\n"
 			"Top 10 Fastest Times:\n\n";
 		vector<string>::const_iterator it;
 		for(it = times.begin(); it != times.end(); ++it)
@@ -166,7 +166,7 @@ void Checkers::loadTimes(sf::RenderWindow& window, sf::Event& event)
 			while(window.pollEvent(event))
 			{
 				// go back to the main menu
-				if((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::Escape))
+				if((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::B))
 				{
 					cout << endl << "Closing Fastest Times View. Returning to Main Menu." << endl;
 					view = false;
