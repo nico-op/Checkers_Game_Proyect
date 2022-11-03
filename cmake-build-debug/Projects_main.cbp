@@ -8,131 +8,84 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug"/>
+				<Option working_dir="/home/gabrielwolf/Documents/WorkSpace Proyecto II/ProyectoII_DatosII/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="checkersExe">
-				<Option output="/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/checkersExe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug"/>
+				<Option output="/home/gabrielwolf/Documents/WorkSpace Proyecto II/ProyectoII_DatosII/cmake-build-debug/checkersExe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gabrielwolf/Documents/WorkSpace Proyecto II/ProyectoII_DatosII/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 checkersExe"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 checkersExe"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="checkersExe/fast">
-				<Option output="/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/checkersExe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug"/>
+				<Option output="/home/gabrielwolf/Documents/WorkSpace Proyecto II/ProyectoII_DatosII/cmake-build-debug/checkersExe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gabrielwolf/Documents/WorkSpace Proyecto II/ProyectoII_DatosII/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 checkersExe/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="prueba">
-				<Option output="/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/prueba" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 prueba"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="prueba/fast">
-				<Option output="/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/prueba" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 prueba/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 checkersExe/fast"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug"/>
+				<Option working_dir="/home/gabrielwolf/Documents/WorkSpace Proyecto II/ProyectoII_DatosII/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug"/>
+				<Option working_dir="/home/gabrielwolf/Documents/WorkSpace Proyecto II/ProyectoII_DatosII/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j16 -f &quot;/home/gabrielwolf/Documents/WorkSpace\ Proyecto\ II/ProyectoII_DatosII/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/nico/Documentos/ProyectoII_DatosII/PruebaWindow.cpp">
-			<Option target="prueba"/>
-		</Unit>
-		<Unit filename="/home/nico/Documentos/ProyectoII_DatosII/main.cpp">
+		<Unit filename="/home/gabrielwolf/Documents/WorkSpace Proyecto II/ProyectoII_DatosII/main.cpp">
 			<Option target="checkersExe"/>
 		</Unit>
-		<Unit filename="/home/nico/Documentos/ProyectoII_DatosII/CMakeLists.txt">
+		<Unit filename="/home/gabrielwolf/Documents/WorkSpace Proyecto II/ProyectoII_DatosII/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -1,4 +1,3 @@
-/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/CMakeFiles/checkersExe.dir
-/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/CMakeFiles/prueba.dir
-/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/gabrielwolf/Documents/WorkSpace Proyecto II/ProyectoII_DatosII/cmake-build-debug/CMakeFiles/checkersExe.dir
+/home/gabrielwolf/Documents/WorkSpace Proyecto II/ProyectoII_DatosII/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/gabrielwolf/Documents/WorkSpace Proyecto II/ProyectoII_DatosII/cmake-build-debug/CMakeFiles/rebuild_cache.dir

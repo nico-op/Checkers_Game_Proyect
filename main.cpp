@@ -12,6 +12,7 @@ public:
 
     void Draw(sf::RenderWindow& window) {
         sf::RectangleShape tile;
+
         tile.setSize(sf::Vector2f(75.f,75.f));
         for (int i = 0;i < size;i++) {
             for (int j = 0;j < size;j++) {
@@ -24,11 +25,15 @@ public:
                 }
                 window.draw(tile);
 
+                //Aca se crea la columna y fila para la numeracion
+                //Rectangulo vertical
                 sf::RectangleShape tile1;
                 tile1.setSize(sf::Vector2f(100.f,600.f));
                 tile1.setPosition(sf::Vector2f(600,0));
                 tile1.setFillColor(sf::Color(139,69,19));
                 window.draw(tile1);
+
+                //Rectangulo horizontal
 
                 sf::RectangleShape tile2;
                 tile2.setSize(sf::Vector2f(600.f,100.f));
@@ -39,7 +44,7 @@ public:
                 //Aca se van a numerar las columnas del tablero (A-H)
                 sf:: Text textA, textB, textC, textD , textE, textF, textG, textH;
                 sf:: Font font;
-                font.loadFromFile("/home/nico/Documentos/ProyectoII_DatosII/Garuda.ttf");
+                font.loadFromFile("/home/gabrielwolf/Documents/WorkSpace Proyecto II/ProyectoII_DatosII/Garuda.ttf");
                 //Seleccionar fuente
                 textA.setFont(font); textB.setFont(font); textC.setFont(font); textD.setFont(font);
                 textE.setFont(font); textF.setFont(font); textG.setFont(font); textH.setFont(font);

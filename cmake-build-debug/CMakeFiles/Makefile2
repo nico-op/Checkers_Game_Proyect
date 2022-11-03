@@ -54,17 +54,16 @@ RM = /snap/clion/209/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nico/Documentos/ProyectoII_DatosII
+CMAKE_SOURCE_DIR = "/home/gabrielwolf/Documents/WorkSpace Proyecto II/ProyectoII_DatosII"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/gabrielwolf/Documents/WorkSpace Proyecto II/ProyectoII_DatosII/cmake-build-debug"
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
 all: CMakeFiles/checkersExe.dir/all
-all: CMakeFiles/prueba.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,7 +72,6 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/checkersExe.dir/clean
-clean: CMakeFiles/prueba.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -83,14 +81,14 @@ clean: CMakeFiles/prueba.dir/clean
 CMakeFiles/checkersExe.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/checkersExe.dir/build.make CMakeFiles/checkersExe.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/checkersExe.dir/build.make CMakeFiles/checkersExe.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target checkersExe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/gabrielwolf/Documents/WorkSpace Proyecto II/ProyectoII_DatosII/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target checkersExe"
 .PHONY : CMakeFiles/checkersExe.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/checkersExe.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gabrielwolf/Documents/WorkSpace Proyecto II/ProyectoII_DatosII/cmake-build-debug/CMakeFiles" 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/checkersExe.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gabrielwolf/Documents/WorkSpace Proyecto II/ProyectoII_DatosII/cmake-build-debug/CMakeFiles" 0
 .PHONY : CMakeFiles/checkersExe.dir/rule
 
 # Convenience name for target.
@@ -101,32 +99,6 @@ checkersExe: CMakeFiles/checkersExe.dir/rule
 CMakeFiles/checkersExe.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/checkersExe.dir/build.make CMakeFiles/checkersExe.dir/clean
 .PHONY : CMakeFiles/checkersExe.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/prueba.dir
-
-# All Build rule for target.
-CMakeFiles/prueba.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prueba.dir/build.make CMakeFiles/prueba.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prueba.dir/build.make CMakeFiles/prueba.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target prueba"
-.PHONY : CMakeFiles/prueba.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/prueba.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/prueba.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nico/Documentos/ProyectoII_DatosII/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/prueba.dir/rule
-
-# Convenience name for target.
-prueba: CMakeFiles/prueba.dir/rule
-.PHONY : prueba
-
-# clean rule for target.
-CMakeFiles/prueba.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prueba.dir/build.make CMakeFiles/prueba.dir/clean
-.PHONY : CMakeFiles/prueba.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

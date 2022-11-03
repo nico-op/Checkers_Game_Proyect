@@ -1,0 +1,13 @@
+/snap/clion/209/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/209/bin/ninja/linux/ninja -G Ninja -S /home/gabrielwolf/Downloads/checkers-master -B /home/gabrielwolf/Downloads/checkers-master/cmake-build-debug
+Checkers CHECKERS
+-- The CXX compiler identification is GNU 11.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found SFML 2.5 in /usr/include
+/usr/lib/x86_64-linux-gnu/libsfml-system.so/usr/lib/x86_64-linux-gnu/libsfml-window.so/usr/lib/x86_64-linux-gnu/libsfml-graphics.so/usr/lib/x86_64-linux-gnu/libsfml-audio.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/gabrielwolf/Downloads/checkers-master/cmake-build-debug

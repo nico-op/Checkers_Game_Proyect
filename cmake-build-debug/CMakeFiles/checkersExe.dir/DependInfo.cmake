@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/nico/Documentos/ProyectoII_DatosII/main.cpp" "CMakeFiles/checkersExe.dir/main.cpp.o" "gcc" "CMakeFiles/checkersExe.dir/main.cpp.o.d"
+  "/home/gabrielwolf/Documents/WorkSpace Proyecto II/ProyectoII_DatosII/main.cpp" "CMakeFiles/checkersExe.dir/main.cpp.o" "gcc" "CMakeFiles/checkersExe.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.
