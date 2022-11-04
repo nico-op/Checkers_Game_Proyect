@@ -1,16 +1,8 @@
 /*
-*	This is a checkers game programmed in C++ using SFML.
-*	By Zach Mertens (https://github.com/zmertens, azzach19@yahoo.com)
-*	Free software! GPL license.
-*
-*	This is the main program file for Checkers. It contains a command loop for the main menu.
-*	The Main class handles menu selections such as 1) play, 2) view rules, 3) view best scores.
-*	Menu options are selected by pressing the appropriate key on the keyboard.
-*	There is a "game in progress" animation below the main menu options.
-*	All graphics are drawn using SFML primitives (circles, rectangles, and basic polygons).
+* Este es el archivo de programa principal de Checkers. La clase principal maneja selecciones de menú,
+* las opciones del menú se seleccionan presionando la tecla correspondiente en el teclado.
+* Todos los gráficos se dibujan utilizando primitivas SFML.
 */
-
-//PRUEBA
 
 #include "Checkers.hpp"
 #include "CheckerGame.hpp"
@@ -26,10 +18,9 @@ using std::sort;
 
 Checkers::Checkers() {}
 
-/* Start the Checkers game by creating a window, menu options, and performing a graphical animation on the window */
+/* En esta sección se inicia el juego  de Damas creando una ventana, opciones de menú y realizando una gráfica en la ventana */
 void Checkers::start()
 {
-	// constant strings
 	const string RESOURCE_ERROR_IMAGE = "ERROR - cannot open \"resources/Checkerboard_8x8_125px.png\"";
 	const string RESOURCE_ERROR_FONT = "ERROR - cannot open \"resources/ENGR.TTF\"";
 	const string TITLE = "INMERSIVE CHECKERS";
@@ -39,38 +30,37 @@ void Checkers::start()
 	const string RULES = "See the Checker_Rules.txt files in resources.";
 	const string VIEW_TIMES = "View Fastest Times (in minutes) selected, Main Screen";
 
-	// setup the window (give dimensions, followed by a window title, and the default format)
+    //Configuración de la ventana
 	sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), WINDOW_TITLE, sf::Style::Default);
 	window.setVerticalSyncEnabled(true);
-	// the creation coordinates of the window context on the monitor
 	window.setPosition(sf::Vector2i(WINDOW_POSITION_X, WINDOW_POSITION_Y));
-	
-	// load an image to use as an icon on the titlebar
+
+    // Carga una imagen
 	sf::Image image;
 	if(!image.loadFromFile("/home/nico/Escritorio/ProyectoII_DatosII/Checkers/resources/Checkerboard_8x8_125px.png"))
 		cerr << RESOURCE_ERROR_IMAGE << endl;
 	// Vector out of range error
 	//window.setIcon(image.getSize().x, image.getSize().y, image.getPixelsPtr());
 	
-	// load the text font
+	// Carga el tipo de letra
 	sf::Font font;
 	if(!font.loadFromFile("/home/nico/Escritorio/ProyectoII_DatosII/Checkers/resources/Gayathri-Regular.otf"))
 		cerr << RESOURCE_ERROR_FONT << endl;
 	
-	// initialize menu fonts
+	// Inicia las fuentes del menú
 	sf::Text menuMessage, menuTitle;
 	menuTitle.setFont(font);
 	menuTitle.setCharacterSize(WINDOW_WIDTH / 40);
-	menuTitle.setPosition(0, 0); // draw @ top-left corner of window
+	menuTitle.setPosition(0, 0); //dibujar en la esquina superior izquierda de la ventana
 	menuTitle.setColor(sf::Color::Red);
 	menuTitle.setString(TITLE);
 	menuMessage.setFont(font);
 	menuMessage.setCharacterSize(WINDOW_WIDTH / 40);
-	menuMessage.setPosition(0, WINDOW_HEIGHT / 40); // draw slightly below the title
+	menuMessage.setPosition(0, WINDOW_HEIGHT / 40); // Dibujar debajo del titulo
 	menuMessage.setColor(sf::Color::Black);
 	menuMessage.setString(MAIN_MENU);
 	
-	int mouseOverX = 0, mouseOverY = 0; // used to gather information about user's mouse coords on the window
+	int mouseOverX = 0, mouseOverY = 0; // se usa para recopilar información sobre los cables del mouse del usuario en la ventana
 	
 	while(window.isOpen())
 	{
@@ -78,51 +68,47 @@ void Checkers::start()
 		while(window.pollEvent(event))
 		{
 			if((event.type == sf::Event::Closed) 
-				|| ((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::Escape))) // close SFML window
+				|| ((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::Escape))) // cerrar la ventana cuando esta en el menú
 			{
 				window.close();
 			}
-			else if((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::L)) // human verses human
+
+			else if((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::C)) // jugador versus computadora
 			{
-				CheckerGame checkerGame(window, true, true); // both players are human
+				CheckerGame checkerGame(window, true, false);
 				checkerGame.startCheckers(window, event);
 			}
-			else if((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::C)) // human verses computer
-			{
-				CheckerGame checkerGame(window, true, false); // only player 1 is human
-				checkerGame.startCheckers(window, event);
-			}
-			else if((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::R)) // Rules is selected
+			else if((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::R)) // ver reglas
 			{
 				cout << RULES << endl;
 			}
-			else if((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::H)) // view best scores is selected
+			else if((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::H)) // ver historial
 			{
 				cout << VIEW_TIMES << endl;
 				loadTimes(window, event);
 			}
 			else if (event.type == sf::Event::MouseMoved)
 			{
-				// saves these coordinates and draws a nice green or purple box around the closest moused over square on the checkerboard.
+                // guarda coordenadas y dibuja un cuadro verde o morado alrededor del cuadrado más cercano en el tablero de ajedrez.
 				mouseOverX = event.mouseMove.x;
 				mouseOverY = event.mouseMove.y;
 			}
 		}
 
-		// SFML window drawing sequence
+        // Secuencia de dibujo de la ventana SFML
 		window.clear(sf::Color::White);
 		window.draw(menuTitle);
 		window.draw(menuMessage);
 		animation(window, mouseOverX, mouseOverY);
 		window.display();
-	} // end of window.isOpen()
+	}
 }
 
-/* load the fastest 10 scores from external file storage */
+/* carga las 10 puntuaciones más rápidas desde un almacenamiento de archivos externo */
 void Checkers::loadTimes(sf::RenderWindow& window, sf::Event& event)
 {
 	const string RESOURCE_ERROR_SAV = "ERROR - cannot open \"game_times.sav\"";
-	ifstream file("/home/nico/Escritorio/ProyectoII_DatosII/Checkers/src/game_times.sav"); // open the file for reading
+	ifstream file("/home/nico/Escritorio/ProyectoII_DatosII/Checkers/src/game_times.sav"); // abre el archivo para lectura
 	if(!file)
 		cerr << RESOURCE_ERROR_SAV << endl;
 	else
@@ -134,21 +120,21 @@ void Checkers::loadTimes(sf::RenderWindow& window, sf::Event& event)
 		while(i < 10 && file >> temp)
 		{
 			++i;
-			temp += "\n"; // append a newline to the time
+			temp += "\n"; // agregar una nueva línea a la hora
 			times.push_back(temp);
 			// cout << temp << endl;
-		}			
+		}
 
-		// load the text font
+        // carga la fuente del texto
 		sf::Font font;
 		if(!font.loadFromFile("/home/nico/Escritorio/ProyectoII_DatosII/Checkers/resources/ENGR.TTF"))
 			cerr << "ERROR - cannot find resource file ENGR.TTF" << endl;
 		sf::Text text;
 		text.setFont(font);
 		text.setCharacterSize(WINDOW_WIDTH / 40);
-		text.setPosition(0, WINDOW_HEIGHT / 40); // draw slightly below the title
+		text.setPosition(0, WINDOW_HEIGHT / 40); //dibujar ligeramente debajo del título
 		text.setColor(sf::Color::Black);
-		// now sort the times in non-decreasing order
+        // ahora ordena los tiempos en orden no decreciente
 		sort(times.begin(), times.end());
 		// reset temp
 		temp = "Utilice la letra B para volver al menu\n\n\n"
@@ -159,48 +145,48 @@ void Checkers::loadTimes(sf::RenderWindow& window, sf::Event& event)
 		// set the text to temp
 		text.setString(temp);
 
-		// this loop keeps the top 10 best scores on the window
+		// este bucle mantiene las 10 mejores puntuaciones en la ventana
 		bool view = true;
 		while(view)
 		{
 			while(window.pollEvent(event))
 			{
-				// go back to the main menu
+				// volver al menu
 				if((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::B))
 				{
 					cout << endl << "Closing Fastest Times View. Returning to Main Menu." << endl;
 					view = false;
 				}
-		
-				// SFML drawing sequence
+
+                // Secuencia de dibujo SFML
 				window.clear(sf::Color::White);
-				window.draw(text); // draw the times and header
+				window.draw(text); // dibuja los tiempos y el encabezado
 				window.display();
 			}
 		}
 	}
 }
 
-/* create a fun little animation on the main menu (sort of like showing a game in progress) */
+/* crea una pequeña animación que muestra el tablero en el menú principal */
 void Checkers::animation(sf::RenderWindow& window, const int& mouseOverX, const int& mouseOverY)
 { 
-	/* The animation is of a mock-checker game. It takes up roughly 3/4 the window */
-	// reset startingX, startingY, and k
+	/* La animación es de un juego de damas simuladas. Ocupa aproximadamente 3/4 de la ventana */
+    // restablecer sstartingstarting, y k
 	int startingX = 0, startingY = WINDOW_HEIGHT / 4;
 	sf::CircleShape circle (WINDOW_WIDTH / (2 * SQUARES_HORIZONTAL));
-	circle.setPosition(WINDOW_WIDTH, 0); // get rid of the 0,0 default constructed circle
+	circle.setPosition(WINDOW_WIDTH, 0); // deshacerse del círculo construido por defecto 0,0
 	sf::RectangleShape square (sf::Vector2f(static_cast<float>(XOFFSET), static_cast<float>(YOFFSET)));
 	for(int i = 0; i < SQUARES_VERTICAL - 2; ++i)
 	{	
 		for(int j = 0; j < SQUARES_HORIZONTAL; ++j)
-		{	
-			// position the square
+		{
+            // posicionar el cuadrado
 			square.setPosition(static_cast<float>(startingX), static_cast<float>(startingY));
 			sf::RectangleShape temp (sf::Vector2f(static_cast<float>(XOFFSET / 3), static_cast<float>(YOFFSET / 3)));
 			temp.setPosition(static_cast<float>(mouseOverX), static_cast<float>(mouseOverY));
 			if(square.getGlobalBounds().intersects(temp.getGlobalBounds()))
 			{
-				// give the move to square a nice green highlight
+                // le da al movimiento al cuadrado resaltado verde
 				square.setOutlineThickness(-(SQUARES_VERTICAL / 2));
 				square.setOutlineColor(sf::Color::Green);	
 			}
@@ -215,7 +201,7 @@ void Checkers::animation(sf::RenderWindow& window, const int& mouseOverX, const 
 				circle.setFillColor(sf::Color::White); //Pieza blanca de animacion
 				circle.setPosition(static_cast<float>(startingX), static_cast<float>(startingY));
 			}
-			// this crazy looking if statement gives the checkered B/W pattern
+
 			if((j % 2 == 0 && i % 2 == 0) || (j % 2 != 0 && i % 2 != 0))
 				square.setFillColor(sf::Color(231,179,133)); //Color beige
 			else
@@ -223,7 +209,7 @@ void Checkers::animation(sf::RenderWindow& window, const int& mouseOverX, const 
 			window.draw(square);
 			window.draw(circle);
 			startingX += XOFFSET;
-			// erase any previous color highlights from the
+            // borra cualquier resaltado de color anterior del cuadro
 			square.setOutlineThickness(0);
 			square.setOutlineColor(sf::Color(0, 0, 0, 255));
 		}
